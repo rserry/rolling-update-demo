@@ -24,11 +24,11 @@ kind: Service
 metadata:
   name: hello-world-service
 spec:
-  type: NodePort # Changed from LoadBalancer to NodePort
+  type: NodePort
   selector:
     app: hello-world-app
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30007 # Optional: specify a port within 30000-32767, or omit to allow Kubernetes to choose
+      nodePort: 30007
